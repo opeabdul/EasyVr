@@ -23,4 +23,9 @@
     <string name="vr_placeholder_text">Virtual Reality (VR) is getting more popular, redefinig the way we experience the what we see. We are offering the best food in Hong Kong</string>
     <string name="add_description">Add description</string>
     <string name="title">Title</string>
+    <string name="choose_location">Choose Location</string>
+    <string name="description">Description</string>
+    <string name="choose_cover">Choose Cover</string>
+    <string name="uploads">Uploads</string>
+    <string name="cover_image">Cover Image</string>
 </resources>
