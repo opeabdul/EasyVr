@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainPage">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/main_image_view_pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tour_buttons_layout"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/highlight_tour_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/highlight_tour"
+            tools:text="@string/highlight_tour"
+            android:layout_marginTop="40dp"
+            android:paddingEnd="30dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_marginStart="@dimen/layout_horizontal_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/city_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/santo_rino"
+            tools:text="@string/santo_rino"
+            android:paddingVertical="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="30dp"
+            android:background="@color/faded_black_lite"
+            android:textAllCaps="true"
+            android:textColor="@color/text_white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:layout_marginStart="@dimen/layout_horizontal_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/highlight_tour_textView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/country_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cape_de_varde"
+            tools:text="@string/cape_de_varde"
+            android:padding="10dp"
+            android:background="@color/faded_color_primary"
+            android:textAllCaps="true"
+            android:textColor="@color/text_white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:layout_marginStart="@dimen/layout_horizontal_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/city_textView" />
+
+
+        <com.pixelcan.inkpageindicator.InkPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:ipi_animationDuration="320"
+            app:ipi_currentPageIndicatorColor="@color/page_indicator_color"
+            app:ipi_dotDiameter="10dp"
+            app:ipi_dotGap="8dp"
+            android:layout_marginBottom="30dp"
+            app:ipi_pageIndicatorColor="@color/page_indicator_color_inactive"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tour_buttons_layout" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/button_back_imageView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/button_back_image" />
+
+        <LinearLayout
+            android:id="@+id/tour_buttons_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="@id/button_back_imageView"
+            app:layout_constraintEnd_toEndOf="@id/button_back_imageView"
+            app:layout_constraintStart_toStartOf="@id/button_back_imageView"
+            app:layout_constraintTop_toTopOf="@id/button_back_imageView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/create_tour_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/faded_color_primary"
+                android:foreground="?android:selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/create_tour_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_tour"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_tours_0"
+                    android:textColor="@color/text_white"
+                    app:layout_constraintEnd_toEndOf="@id/create_tour_textView"
+                    app:layout_constraintStart_toStartOf="@id/create_tour_textView"
+                    app:layout_constraintTop_toBottomOf="@id/create_tour_textView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tour_gallery_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/faded_black"
+                android:foreground="?android:selectableItemBackground">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tour_gallery_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tour_gallery"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tours(1034)"
+                    android:textColor="@color/text_white"
+                    app:layout_constraintEnd_toEndOf="@id/tour_gallery_textView"
+                    app:layout_constraintStart_toStartOf="@id/tour_gallery_textView"
+                    app:layout_constraintTop_toBottomOf="@id/tour_gallery_textView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

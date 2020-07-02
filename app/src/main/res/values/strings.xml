@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">EasyVr</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="create_tour">create tour</string>
+    <string name="your_tours_0">Your Tours(0)</string>
+    <string name="tour_gallery">tour gallery</string>
+    <string name="santo_rino">Santo Rino</string>
+    <string name="highlight_tour">highlight tour</string>
+    <string name="cape_de_varde">Cape De Varde</string>
+    <string name="be_in_a_digital_experience">Be in a Digital Experience should be a free</string>
+    <string name="food">Food</string>
+    <string name="property">Property</string>
+    <string name="inspiration">Inspiration</string>
+    <string name="places">Places</string>
+    <string name="vr_placeholder_text">Virtual Reality (VR) is getting more popular, redefinig the way we experience the what we see. We are offering the best food in Hong Kong</string>
+    <string name="add_description">Add description</string>
+    <string name="title">Title</string>
+</resources>

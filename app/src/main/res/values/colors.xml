@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FA5D07</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="text_white">#ffffff</color>
+    <color name="faded_color_primary">#ccFA5D07</color>
+    <color name="faded_black">#cc000000</color>
+
+    <color name="black">#000</color>
+    <color name="black_lite">#666666</color>
+    <color name="faded_black_lite">#cc666666</color>
+    <color name="cashcolor">#057b16</color>
+
+    <color name="page_indicator_color">#FA5D07</color>
+    <color name="page_indicator_color_inactive">#ffffff</color>
+</resources>
