@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.easyvr.MainPage"
-        android:label="@string/first_fragment_label"
+        android:label="@string/app_name"
         tools:layout="@layout/main_page">
 
         <action
@@ -18,11 +18,45 @@
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.easyvr.TourGallery"
-        android:label="@string/second_fragment_label"
+        android:label="@string/gallery_fragment_label"
         tools:layout="@layout/tour_gallery">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/tour_gallery_to_add_description"
+            app:destination="@id/description" />
     </fragment>
+    <fragment
+        android:id="@+id/description"
+        android:name="com.example.easyvr.Description"
+        android:label="Description" >
+        <action
+            android:id="@+id/action_description_to_uploads"
+            app:destination="@id/uploads" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploads"
+        android:name="com.example.easyvr.Uploads"
+        android:label="Uploads"
+        tools:layout="@layout/fragment_uploads" >
+        <action
+            android:id="@+id/action_uploads_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.easyvr.EditFragment"
+        android:label="Edit" >
+        <action
+            android:id="@+id/action_edit_to_publishFragment"
+            app:destination="@id/publishFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/publishFragment"
+        android:name="com.example.easyvr.Publish"
+        android:label="Publish" />
+
 </navigation>

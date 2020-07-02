@@ -22,8 +22,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/user_image"
             android:src="@drawable/ic_view_list_black_24dp"
@@ -44,29 +44,18 @@
             app:layout_constraintStart_toStartOf="@id/user_image"
             app:layout_constraintTop_toBottomOf="@id/user_image" />
 
-        <LinearLayout
-            android:id="@+id/headings_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/line_spacing"
-            android:weightSum="4"
-            android:gravity="center"
-            app:layout_constraintEnd_toStartOf="@id/tune_imageView"
-            app:layout_constraintStart_toStartOf="@id/user_image"
-            app:layout_constraintTop_toBottomOf="@id/digital_experience_textView">
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/food_textView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="@dimen/line_spacing"
                 android:textColor="@color/colorPrimary"
                 android:singleLine="true"
-                android:gravity="center"
                 android:text="@string/food"
                 android:textSize="@dimen/heading_text_size"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/user_image"
+                app:layout_constraintTop_toBottomOf="@id/digital_experience_textView"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/property_textView"
@@ -77,51 +66,58 @@
                 android:gravity="center"
                 android:text="@string/property"
                 android:textSize="@dimen/heading_text_size"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toEndOf="@id/food_textView"
+                app:layout_constraintTop_toTopOf="@id/food_textView"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/inspiration_textView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="1"
                 android:singleLine="true"
                 android:text="@string/inspiration"
                 android:textSize="@dimen/heading_text_size"
-                android:textStyle="bold" />
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/property_textView"
+                app:layout_constraintTop_toTopOf="@id/property_textView"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/places_textView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="1"
                 android:singleLine="true"
                 android:text="@string/places"
                 android:textSize="@dimen/heading_text_size"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toEndOf="@id/inspiration_textView"
+                app:layout_constraintTop_toTopOf="@id/inspiration_textView"/>
 
-        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/tune_imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_marginHorizontal="10dp"
+            android:layout_marginEnd="20dp"
             android:src="@drawable/ic_tune_black_24dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/headings_layout"
-            app:layout_constraintTop_toTopOf="@id/headings_layout"
-            app:layout_constraintBottom_toBottomOf="@id/headings_layout"/>
+            app:layout_constraintTop_toTopOf="@id/places_textView"
+            app:layout_constraintBottom_toBottomOf="@id/places_textView"/>
         
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/headings_layout"
+            app:layout_constraintTop_toBottomOf="@id/food_textView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="20dp"
+            tools:itemCount="10"
             tools:listitem="@layout/item_tour_gallery" />
         
     </androidx.constraintlayout.widget.ConstraintLayout>
