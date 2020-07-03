@@ -6,16 +6,27 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.easyvr.features.publishcontent.bottomsheets.PublishBottomSheetFragment
 
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , PublishBottomSheetFragment.BottomSheetListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         setupActionBarWithNavController(findNavController(R.id.nav_host_fragment))
+    }
+
+
+    override fun onWhatsappClicked() {
+    }
+
+    override fun onYoutubeClicked() {
+    }
+
+    override fun onInstagramClicked() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

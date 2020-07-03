@@ -13,7 +13,9 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/SecondFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -30,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/description"
-        android:name="com.example.easyvr.Description"
+        android:name="com.example.easyvr.features.publishcontent.Description"
         android:label="Description" >
         <action
             android:id="@+id/action_description_to_uploads"
@@ -38,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/uploads"
-        android:name="com.example.easyvr.Uploads"
+        android:name="com.example.easyvr.features.publishcontent.Uploads"
         android:label="Uploads"
         tools:layout="@layout/fragment_uploads" >
         <action
@@ -47,7 +49,7 @@
     </fragment>
     <fragment
         android:id="@+id/editFragment"
-        android:name="com.example.easyvr.EditFragment"
+        android:name="com.example.easyvr.features.publishcontent.EditFragment"
         android:label="Edit" >
         <action
             android:id="@+id/action_edit_to_publishFragment"
@@ -56,7 +58,7 @@
 
     <fragment
         android:id="@+id/publishFragment"
-        android:name="com.example.easyvr.Publish"
+        android:name="com.example.easyvr.features.publishcontent.Publish"
         android:label="Publish" />
 
 </navigation>
