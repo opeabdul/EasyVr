@@ -90,37 +90,40 @@
 
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginEnd="40dp"
-                        android:src="@drawable/edit"
+                        android:src="@drawable/funnel"
+                        android:background="@drawable/primary_oval"
                         app:layout_constraintBottom_toBottomOf="@id/background_image"
                         app:layout_constraintEnd_toStartOf="@id/color_adjustment_imageView"
                         app:layout_constraintTop_toTopOf="@id/background_image" />
 
                     <ImageView
                         android:id="@+id/color_adjustment_imageView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/color_adjustment"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/pantone"
+                        android:background="@drawable/primary_oval"
                         app:layout_constraintBottom_toBottomOf="@id/background_image"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@id/background_image" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="40dp"
-                        android:src="@drawable/delete"
+                        android:src="@drawable/recycle_bin_ic"
+                        android:background="@drawable/primary_oval"
                         app:layout_constraintBottom_toBottomOf="@id/background_image"
                         app:layout_constraintStart_toEndOf="@id/color_adjustment_imageView"
                         app:layout_constraintTop_toTopOf="@id/background_image" />
 
                     <ImageView
                         android:id="@+id/preview_imageView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:src="@drawable/preview_ic"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -168,37 +171,40 @@
 
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginEnd="40dp"
-                        android:src="@drawable/edit"
+                        android:src="@drawable/funnel"
+                        android:background="@drawable/primary_oval"
                         app:layout_constraintBottom_toBottomOf="@id/background_image2"
                         app:layout_constraintEnd_toStartOf="@id/color_adjustment_imageView2"
                         app:layout_constraintTop_toTopOf="@id/background_image2" />
 
                     <ImageView
                         android:id="@+id/color_adjustment_imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/color_adjustment"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/pantone"
+                        android:background="@drawable/primary_oval"
                         app:layout_constraintBottom_toBottomOf="@id/background_image2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@id/background_image2" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="40dp"
-                        android:src="@drawable/delete"
+                        android:background="@drawable/primary_oval"
+                        android:src="@drawable/recycle_bin_ic"
                         app:layout_constraintBottom_toBottomOf="@id/background_image2"
                         app:layout_constraintStart_toEndOf="@id/color_adjustment_imageView2"
                         app:layout_constraintTop_toTopOf="@id/background_image2" />
 
                     <ImageView
                         android:id="@+id/preview_imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_margin="10dp"
                         android:src="@drawable/preview_ic"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -215,7 +221,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_margin="@dimen/double_line_spacing"
-            android:background="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
             android:text="next"
             android:textColor="@color/text_white"
             app:layout_constraintBottom_toBottomOf="parent"
