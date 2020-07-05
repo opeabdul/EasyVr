@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.easyvr.TourGallery"
+        android:name="com.example.easyvr.features.tour.TourGallery"
         android:label="@string/gallery_fragment_label"
         tools:layout="@layout/tour_gallery">
 
@@ -59,6 +59,16 @@
     <fragment
         android:id="@+id/publishFragment"
         android:name="com.example.easyvr.features.publishcontent.Publish"
-        android:label="Publish" />
+        android:label="Publish" >
+        <action
+            android:id="@+id/action_publishFragment_to_tourPage"
+            app:destination="@id/tourPage"
+            app:enterAnim="@anim/anim_slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/tourPage"
+        android:name="com.example.easyvr.features.tour.TourPage"
+        android:label="fragment_tour_page"
+        tools:layout="@layout/fragment_tour_page" />
 
 </navigation>

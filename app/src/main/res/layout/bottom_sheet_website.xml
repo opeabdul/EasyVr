@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/layout_horizontal_margin">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/website_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/website"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/demarcation_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/website_textView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/enter_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/double_line_spacing"
+            android:text="Enter the label and URL"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/demarcation_line_view" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/label_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:background="@drawable/rectangle2"
+            android:hint="@string/e_g_mary_abc_limited"
+            android:inputType="text"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enter_label_textView" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/url_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:background="@drawable/rectangle2"
+            android:hint="@string/www_website_com"
+            android:inputType="text"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_editText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/faded_black_lite"
+            android:text="cancel"
+            android:textColor="@color/text_white"
+            app:layout_constraintBottom_toBottomOf="@id/confirm_button"
+            app:layout_constraintEnd_toStartOf="@id/confirm_button"
+            app:layout_constraintTop_toTopOf="@id/confirm_button" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/double_line_spacing"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="confirm"
+            android:textColor="@color/text_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/url_editText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

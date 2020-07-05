@@ -34,5 +34,20 @@
     <string name="hall">Hall</string>
     <string name="your_tour_has_been_published">Thank you! your tour has been published. <br /> Click here to experience</string>
     <string name="embed_on_website">Embed on website</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="color_adjustment">Color Adjustment</string>
+    <string name="crop">crop</string>
+    <string name="blur_brush">Blur Brush</string>
+    <string name="special_filter">Special Filter</string>
+    <string name="background">Background</string>
+    <string name="color">Color</string>
+    <string name="noise">Noise</string>
+    <string name="sharpen">Sharpen</string>
+    <string name="gamma">Gamma</string>
+    <string name="website">Website</string>
+    <string name="e_g_mary_abc_limited">(E.g. Mary ABC, Limited</string>
+    <string name="www_website_com">www.website.com</string>
     <!--    <string name="your_tour_has_been_published"><![CDATA[Thank you! your tour has been published. <br /> Click here to experience]]></string>-->
 </resources>

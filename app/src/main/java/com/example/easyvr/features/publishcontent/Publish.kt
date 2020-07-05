@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.easyvr.R
 import com.example.easyvr.databinding.FragmentPublishBinding
 import com.example.easyvr.features.publishcontent.bottomsheets.PublishBottomSheetFragment
@@ -42,6 +43,10 @@ class Publish : Fragment(){
         mBinding.publishButton.setOnClickListener {
             PublishBottomSheetFragment().show(requireActivity()
                 .supportFragmentManager, "publishBottomSheet")
+        }
+
+        mBinding.storageImageView.setOnClickListener {
+            findNavController().navigate(PublishDirections.actionPublishFragmentToTourPage())
         }
         return mBinding.root
     }

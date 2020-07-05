@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/layout_horizontal_margin">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/color_adjustment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color_adjustment"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@id/crop_textView"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/crop_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crop"
+            app:layout_constraintBottom_toBottomOf="@id/color_adjustment"
+            app:layout_constraintEnd_toStartOf="@id/special_filter_textView"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/color_adjustment"
+            app:layout_constraintTop_toTopOf="@id/color_adjustment" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/special_filter_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/special_filter"
+            app:layout_constraintBottom_toBottomOf="@id/color_adjustment"
+            app:layout_constraintEnd_toStartOf="@id/blur_brush_textView"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/crop_textView"
+            app:layout_constraintTop_toTopOf="@id/color_adjustment" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/blur_brush_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blur_brush"
+            app:layout_constraintBottom_toBottomOf="@id/color_adjustment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/special_filter_textView"
+            app:layout_constraintTop_toTopOf="@id/color_adjustment" />
+
+        <View
+            android:id="@+id/demarcation_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/color_adjustment" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/background_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/double_line_spacing"
+            android:text="@string/background"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/demarcation_line_view" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/minimise_imageView"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/background_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/background_textView"
+            app:srcCompat="@drawable/subtract_btn" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/gamma_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:text="@string/gamma"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/background_textView" />
+
+        <SeekBar
+            android:id="@+id/gamma_seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:thumbTint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/gamma_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gamma_textView"
+            app:layout_constraintTop_toTopOf="@id/gamma_textView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sharpen_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:text="@string/sharpen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gamma_textView" />
+
+        <SeekBar
+            android:id="@+id/sharpen_seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:thumbTint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/sharpen_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gamma_seekBar"
+            app:layout_constraintTop_toTopOf="@id/sharpen_textView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/noise_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/line_spacing"
+            android:text="@string/noise"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sharpen_textView" />
+
+        <SeekBar
+            android:id="@+id/noise_seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:thumbTint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/noise_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gamma_seekBar"
+            app:layout_constraintTop_toTopOf="@id/noise_textView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/color_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/double_line_spacing"
+            android:text="@string/color"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noise_textView" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/add"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/color_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/color_textView"
+            app:srcCompat="@drawable/ic_add_orange_24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

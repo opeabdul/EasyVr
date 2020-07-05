@@ -118,6 +118,16 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/choose_cover_textView" />
 
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/choose_file"
+                    app:layout_constraintEnd_toEndOf="@id/choose_cover_view"
+                    app:layout_constraintStart_toStartOf="@id/choose_cover_view"
+                    app:layout_constraintBottom_toBottomOf="@id/choose_cover_view"
+                    app:layout_constraintTop_toTopOf="@id/choose_cover_view"
+                    />
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/choose_location_textView"
                     android:layout_width="wrap_content"
