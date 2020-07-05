@@ -9,7 +9,10 @@ import android.view.ViewGroup
 import com.example.easyvr.R
 import com.example.easyvr.databinding.FragmentTourPageBinding
 import com.example.easyvr.features.tour.bottomsheets.AdjustmentBottomSheet
+import com.example.easyvr.features.tour.bottomsheets.FilterListBottomSheet
 import com.example.easyvr.features.tour.bottomsheets.WebsiteBottomSheet
+import com.example.easyvr.features.tour.dialogs.UploadDialog
+import com.example.easyvr.utils.getFilterList
 import com.google.android.material.snackbar.Snackbar
 
 /**
@@ -25,13 +28,19 @@ class TourPage : Fragment(), AdjustmentBottomSheet.SheetClickListener, WebsiteBo
         mBinding = FragmentTourPageBinding.inflate(inflater)
         mBinding.binocularsImageView.setOnClickListener {
             AdjustmentBottomSheet.instance(this)
-                .show(requireActivity().supportFragmentManager, "AdjustmentSheets")
+                .show(requireActivity().supportFragmentManager, "AdjustmentSheet")
         }
 
         mBinding.cancel.setOnClickListener {
             WebsiteBottomSheet.instance(this)
                 .show(requireActivity().supportFragmentManager, "WebsiteBottomSheet")
         }
+
+        mBinding.icon360.setOnClickListener {
+            FilterListBottomSheet.newInstance(getFilterList())
+                .show(requireActivity().supportFragmentManager, "FilterSheet")
+        }
+
         return mBinding.root
     }
 
@@ -43,4 +52,13 @@ class TourPage : Fragment(), AdjustmentBottomSheet.SheetClickListener, WebsiteBo
         Snackbar.make(mBinding.root, "Website Bottom Sheet Clicked", Snackbar.LENGTH_SHORT).show()
     }
 
+    override fun onResume() {
+        super.onResume()
+        requireActivity().actionBar?.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        requireActivity().actionBar?.show()
+    }
 }

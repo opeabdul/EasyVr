@@ -68,7 +68,7 @@
     <fragment
         android:id="@+id/tourPage"
         android:name="com.example.easyvr.features.tour.TourPage"
-        android:label="fragment_tour_page"
+        android:label="Tour Page"
         tools:layout="@layout/fragment_tour_page" />
 
 </navigation>

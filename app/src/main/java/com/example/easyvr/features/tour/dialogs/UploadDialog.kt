@@ -1,31 +1,31 @@
-package com.example.easyvr.features.publishcontent
+package com.example.easyvr.features.tour.dialogs
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.DialogFragment
 import com.example.easyvr.R
+import com.example.easyvr.databinding.FragmentUploadDialogBinding
 import com.example.easyvr.databinding.FragmentUploadsBinding
-import com.example.easyvr.features.tour.dialogs.UploadDialog
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-lateinit var mBinding: FragmentUploadsBinding
-
 /**
  * A simple [Fragment] subclass.
- * Use the [Uploads.newInstance] factory method to
+ * Use the [UploadDialog.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Uploads : Fragment() {
+class UploadDialog : DialogFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    lateinit var mBinding: FragmentUploadDialogBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,10 +40,8 @@ class Uploads : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        mBinding = FragmentUploadsBinding.inflate(inflater)
-        mBinding.chooseFileImageView.setOnClickListener {
-            UploadDialog.newInstance().show(requireActivity().supportFragmentManager, "UploadDialog")
-        }
+        mBinding = FragmentUploadDialogBinding.inflate(inflater)
+
         return mBinding.root
     }
 
@@ -54,23 +52,13 @@ class Uploads : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Uploads.
+         * @return A new instance of fragment UploadDialog.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Uploads().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+        fun newInstance() =
+            UploadDialog().apply {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        mBinding.next.setOnClickListener {
-            findNavController().navigate(R.id.action_uploads_to_editFragment)
-        }
+            }
     }
 }
