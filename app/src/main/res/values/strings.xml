@@ -53,5 +53,7 @@
     <string name="file_must_be_less_than_10mb">File must be less than 10mb.</string>
     <string name="allowed_file_type_jpg_jpeg_png_mp4">Allowed file type jpg, jpeg, png, mp4</string>
     <string name="each_can_take_maximum_of_20_files">Each can take maximum of 20 files</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
     <!--    <string name="your_tour_has_been_published"><![CDATA[Thank you! your tour has been published. <br /> Click here to experience]]></string>-->
 </resources>

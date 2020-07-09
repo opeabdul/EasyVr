@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_gravity="end"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/cancel_white"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/destination"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/font"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/global"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/whatsapp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/youtube"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/instagram"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/group"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_white"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

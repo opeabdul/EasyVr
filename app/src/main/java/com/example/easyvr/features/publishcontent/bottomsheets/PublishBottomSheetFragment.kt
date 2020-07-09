@@ -50,12 +50,11 @@ class PublishBottomSheetFragment : BottomSheetDialogFragment() {
         return mBinding.root
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        try{
-            mListener = context as BottomSheetListener
-        }catch (e: ClassCastException){
-            throw ClassCastException("$context Must implement BottomSheetListener")
+    companion object{
+        fun newInstance(listener: BottomSheetListener) =
+            PublishBottomSheetFragment().apply {
+            mListener = listener
         }
     }
+
 }
