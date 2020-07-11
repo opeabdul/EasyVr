@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 
 import com.example.easyvr.R
 import com.example.easyvr.databinding.FragmentTourPageBinding
@@ -54,11 +55,11 @@ class TourPage : Fragment(), AdjustmentBottomSheet.SheetClickListener, WebsiteBo
 
     override fun onResume() {
         super.onResume()
-        requireActivity().actionBar?.hide()
+        (requireActivity() as AppCompatActivity).actionBar?.hide()
     }
 
     override fun onStop() {
         super.onStop()
-        requireActivity().actionBar?.show()
+        (requireActivity() as AppCompatActivity).actionBar?.show()
     }
 }

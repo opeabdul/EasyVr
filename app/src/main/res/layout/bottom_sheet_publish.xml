@@ -49,7 +49,7 @@
             android:layout_height="30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/share_textView"
-            app:srcCompat="@drawable/instagram" />
+            app:srcCompat="@drawable/instagram_red" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/whatsapp_imageView"
@@ -58,7 +58,7 @@
             android:layout_marginStart="20dp"
             app:layout_constraintStart_toEndOf="@id/instagram_imageView"
             app:layout_constraintTop_toTopOf="@id/instagram_imageView"
-            app:srcCompat="@drawable/whatsapp" />
+            app:srcCompat="@drawable/whatsapp_green" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/youtube_imageView"
@@ -67,7 +67,7 @@
             android:layout_marginStart="20dp"
             app:layout_constraintStart_toEndOf="@id/whatsapp_imageView"
             app:layout_constraintTop_toTopOf="@id/instagram_imageView"
-            app:srcCompat="@drawable/youtube" />
+            app:srcCompat="@drawable/youtube_red" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/embed_on_website_textView"
